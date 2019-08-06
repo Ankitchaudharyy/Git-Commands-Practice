@@ -1,0 +1,93 @@
+	-- Basic Commands --
+	
+  Listing all the files in a folder.
+	$ ls
+
+  To show content of the file 
+	$ cat FILE_NAME
+
+
+
+
+	-- Syncing Repositories --
+
+1.  Intialising a local repository in local machine.
+	$ git init
+
+2.  Adding remote repository to origin 
+	$ git remote add origin " https://github.com/....._LINK_OF_REPOSITORY"
+
+3.  Pulling files from central repository to local repository
+	$ git pull origin BRANCH_NAME
+
+4.  Cloning files from central repository to local repository
+	$ git clone "https://github.com/....._LINK_OF_REPOSITORY"
+
+         ** Diff. bw cloning & pulling files **
+	Cloning is like downloading files from central repository.
+	Pulling is like refreshing / downloading files from central repository
+
+5.  Pushing files to central repository from local repository
+	$ git push origin BRANCH_NAME
+
+
+
+
+
+	-- Making Changes --
+
+6.  Checking the state of the working directory or staged area
+`	$ git status
+
+7.   Addding a untracked file to index
+	$ git add "file_name"
+
+8.  Adding all untracked files to index
+	$ git add -A
+
+9.  Commiting changes 
+	$ git commit -m "message_be_written" 
+	$ git commit -a -m "message_be_written"
+
+
+
+
+
+	--Parallel Development --
+
+**BRANCHING
+10.  Creating a new branch
+	$ git branch BRANCH_NAME
+
+11.  Checking 0ut (open) a new branch in Command Line Interface
+	$ git checkout BRANCH_NAME
+
+**MERGING
+12.  Merging a branch into another branch
+	!! Firstly, you should be checkout into the destination branch, then
+	$ git merge BRANCH_NAME_TO_BE_MERGED
+
+**REBASING
+13.   Rebasing a branch into another branch
+	!! Firstly, you should be checkout into the destination branch, then
+	$ git rebase BRANCH_NAME_TO_BE_REBASED
+
+	**  Diff. bw Merging and rebasing **
+	Merging creates a non linear network of branches, while Rebasing creates linear network of branches.
+	Rebasing is preffered over Merging
+
+
+
+
+
+	
+	-- SSH Keys --
+
+$ ssh-keygen
+	-- generated a file containg link
+
+$ cat LINK_OF_THE_FILE_CONTAINING_SSHKEY
+	-- link is then copied.
+	-- open https://github.com/settings/keys.
+`	-- click New SSH Keys. 
+	-- Enter key.
